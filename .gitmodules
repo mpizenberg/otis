@@ -1,0 +1,6 @@
+[submodule "api"]
+	path = api
+	url = git@github.com:mpizenberg/otis-api.git
+[submodule "webclient"]
+	path = webclient
+	url = git@github.com:mpizenberg/otis-webclient.git
