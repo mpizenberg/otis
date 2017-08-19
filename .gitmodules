@@ -7,3 +7,6 @@
 [submodule "analysis"]
 	path = analysis
 	url = https://github.com/mpizenberg/otis-analysis.git
+[submodule "users_annotations"]
+	path = users_annotations
+	url = https://github.com/mpizenberg/otis-users-annotations.git
