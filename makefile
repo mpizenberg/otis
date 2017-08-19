@@ -18,3 +18,9 @@ install :
 	cd api && $(MAKE) install
 	npm install
 	echo "SERVER_PORT=8000" > $(CONFIG_FILE)
+
+# ANALYSE ##############################
+
+
+analyse :
+	cd analysis && $(MAKE)
