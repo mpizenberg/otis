@@ -1,9 +1,9 @@
 [submodule "api"]
 	path = api
-	url = git@github.com:mpizenberg/otis-api.git
+	url = https://github.com/mpizenberg/otis-api.git
 [submodule "webclient"]
 	path = webclient
-	url = git@github.com:mpizenberg/otis-webclient.git
+	url = https://github.com/mpizenberg/otis-webclient.git
 [submodule "analysis"]
 	path = analysis
 	url = https://github.com/mpizenberg/otis-analysis.git
