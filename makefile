@@ -16,6 +16,7 @@ CONFIG_FILE = .env
 install :
 	cd webclient && $(MAKE) install
 	cd api && $(MAKE) install
+	cd analysis && $(MAKE) install
 	npm install
 	echo "SERVER_PORT=8000" > $(CONFIG_FILE)
 
@@ -23,4 +24,4 @@ install :
 
 
 analyse :
-	cd analysis && $(MAKE)
+	cd analysis && $(MAKE) analyse
