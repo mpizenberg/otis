@@ -7,12 +7,20 @@ Outlining on touch device for image segmentation (otis).
 > In Proceedings of the 25th ACM International Conference on multimedia (MM'17).
 > DOI: https://doi.org/10.1145/3123266.3123409
 
+![paper cover][cover]
+
 This repository aims at providing a fully reproducible research work
 accepted at ACM Multimedia 2017.
 It features a web application, client and server,
 as well as the data retrieved from the user study,
 and the code to analyze it and render the paper figures.
 Please cite the aforementioned paper if used in a research work.
+
+Here is the author version of the paper, for personal usage only:
+[Outlining Objects for Interactive Segmentation on Touch Devices][paper]
+
+[paper]: https://mpizenberg.github.io/resources/papers/outlining-objects-interactive.pdf
+[cover]: https://mpizenberg.github.io/resources/papers/outlining-objects-interactive.jpg
 
 > Other citations may be required depending on which part
 > of this project you are using.
