@@ -44,45 +44,75 @@ Make is used to ease the installation and compilation
 
 ### Requirements
 
-You can check your version installed with the `--version` flag.
-For make for example: `make --version`.
-For Node and npm, I recommend using [nvm][install-nvm].
+**Web application**:
 
-* [Node.js][install-node] >= 7.6 (using `async` and `await` in server)
-* [npm][install-npm] (tested with 5.2.0)
-* [elm][install-elm] = 0.18.0 <= v < 0.19
+If you are only interested in the web application,
+the required dependencies are:
 * make (tested with 4.2.1)
-* matlab for analysis (tested with R2016b)
+* Node.js >= 7.6 (using `async` and `await` in server)
+* elm 0.18.0 <= v < 0.19
 
-[install-node]: https://nodejs.org/en/download/package-manager/
-[install-npm]: https://docs.npmjs.com/getting-started/installing-node
-[install-elm]: https://guide.elm-lang.org/install.html
+To avoid the possibility of conflicts with a root global install,
+I strongly recommend to use [nvm (Node Version Manager)][install-nvm].
+
+After installing nvm, installing node (and npm) and then elm is as easy as
+running the following commands from anywhere:
+
+```shell
+nvm install node           # will install latest node and npm
+nvm use node               # choose this latest version as current
+npm install -g elm@0.18.0  # install elm in your current node packages
+```
+
+**Results analysis**:
+
+If you are only interested in the results analysis,
+the required dependencies are:
+* make (tested with 4.2.1)
+* matlab (tested with R2016b)
+
 [install-nvm]: https://github.com/creationix/nvm#install-script
 
 ### Installation
+
+To install only the otis web application:
+
+```shell
+# if requirements are satisfied, install with:
+make install_webapp
+```
+
+To install only the study results analysis:
+
+```shell
+# if requirements are satisfied, install with:
+make install_analysis
+```
+
+To install everything:
 
 ```shell
 # if requirements are satisfied, install with:
 make install
 ```
 
-### Configuration
+### Configuration of web application
 
 During the installation, two non-versioned files are created: `.env` and `api/.env`.
 Change their content for custom configuration (ports, ...).
 
-## Compilation (local web server)
+## Compilation of web application
 
 This will compile and run a local instance of the web server application.
 
 ```shell
-make
+make webapp
 ```
 
 The default server port is 8000,
 now you can just open your browser at `localhost:8000`
 
-## Data analysis
+## User study data analysis
 
 For reference, the data retrieved from the user study is available
 in the `users_annotations/` directory.
@@ -95,7 +125,10 @@ make analyse
 
 This will process the users annotations and generate the figures
 used in the research paper.
-You can of course run this manually by opening matlab in the `analysis/` folder.
+All generated figures and cached intermediary results are stored
+into the directory `analysis/results`.
+You can of course run this manually by opening matlab in the `analysis/` folder
+and running the `main.m` function.
 
 ## License
 
