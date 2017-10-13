@@ -75,6 +75,8 @@ the required dependencies are:
 
 ### Installation
 
+First move into the `otis/` directory and ...
+
 To install only the otis web application:
 
 ```shell
