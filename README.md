@@ -35,6 +35,7 @@ Here is the author version of the paper, for personal usage only:
 * [User study data analysis](#user-study-data-analysis)
 * [License](#license)
 * [References](#references)
+* [FAQ](#faq)
 
 ## Installation
 
@@ -198,6 +199,50 @@ You should cite all the following papers in any resulting publication.
 >
 > [5] Matlab Wrapper for Graph Cut. Shai Bagon.
 > in www.wisdom.weizmann.ac.il/~bagon, December 2006.
+
+
+## FAQ
+
+**Can I install this on a Mac?**
+
+My guess is that it should work but I don't have any Mac at my disposal
+to verify it.
+
+**Can I install this on Windows?**
+
+It will probably not work as is on Windows.
+However, I believe that all techno used
+(make, matlab, nodejs, elm) are compatible.
+Therefore, don't hesitate to reach out and open an issue or pull request
+if you know how to make this possible.
+
+**Why don't I get the segmentation masks in the web application?**
+
+It wasn't designed to perform live segmentations, only to gather user interactions.
+Our goal was to estimate the viability of these interactions in the context
+of fast creation of learning datasets.
+As a consequence, we only ask for one interaction (or very few in case of scribbles)
+without entering in a interactive refinement feedback loop.
+
+Segmentation masks are computed later in the
+"[analysis](#user-study-data-analysis)" part of otis.
+
+**Can I reuse the web application with my own images?**
+
+Yes but you shouldn't.
+This web application was designed for the user study presented in the research paper.
+The images resources are specified in the file `api/resources_list.json`,
+which can be changed with the config file `api/.env` created at installation.
+Nevertheless, you won't be able to easily change the user interface for example
+to keep only the bounding box interaction.
+What I encourage you to do is to reuse this elm package,
+[mpizenberg/elm-image-annotation][elm-image-annotation],
+and build your own interface with it.
+
+If you are interested in building something more generic and reusable
+for the community, reach out to us.
+
+[elm-image-annotation]: https://github.com/mpizenberg/elm-image-annotation
 
 
 ## Creative reference ;)
