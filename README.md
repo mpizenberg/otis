@@ -1,6 +1,7 @@
 # otis
 
 Outlining on touch device for image segmentation (otis).
+Online demo of the user study web app available at [mm17-otis.pizenberg.fr][demo].
 
 > [1] Outlining Objects for Interactive Segmentation on Touch Devices. 2017.
 > Matthieu Pizenberg, Axel Carlier, Emmanuel Faure, Vincent Charvillat.
@@ -19,8 +20,9 @@ Please cite the aforementioned paper if used in a research work.
 Here is the author version of the paper, for personal usage only:
 [Outlining Objects for Interactive Segmentation on Touch Devices][paper]
 
-[paper]: https://mpizenberg.github.io/resources/papers/outlining-objects-interactive.pdf
-[cover]: https://mpizenberg.github.io/resources/papers/outlining-objects-interactive.jpg
+[demo]: http://mm17-otis.pizenberg.fr
+[paper]: https://mpizenberg.github.io/resources/otis/outlining-objects-interactive.pdf
+[cover]: https://mpizenberg.github.io/resources/otis/cover.jpg
 
 > Other citations may be required depending on which part
 > of this project you are using.
@@ -105,14 +107,26 @@ Change their content for custom configuration (ports, ...).
 
 ## Compilation of web application
 
-This will compile and run a local instance of the web server application.
+Online demo of the user study web app available at [mm17-otis.pizenberg.fr][demo].
+The following command will compile and run a local instance of the server.
 
 ```shell
 make webapp
 ```
 
 The default server port is 8000,
-now you can just open your browser at `localhost:8000`
+now you can just open your browser at `localhost:8000`.
+
+To open this on your mobile device, connect to the same network
+and load the page `[computer_ip_address]:[port]` on your device.
+`[computer_ip_address]` can be figured out with commands `ifconfig` or `ip a`.
+`[port]` is the port you have chosen in config, it defaults to 8000.
+At loading, you might get at random one of the three interactions
+(bounding box, outline, scribbles) as shown in the following screenshot.
+
+![][screenshot-webapp]
+
+[screenshot-webapp]: https://mpizenberg.github.io/resources/otis/screenshot-webapp.jpg
 
 ## User study data analysis
 
