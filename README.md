@@ -126,7 +126,7 @@ make analyse
 ```
 
 This will process the users annotations and generate the figures
-used in the research paper.
+presented in the research paper.
 All generated figures and cached intermediary results are stored
 into the directory `analysis/results`.
 You can of course run this manually by opening matlab in the `analysis/` folder
