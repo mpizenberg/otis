@@ -28,6 +28,14 @@ Here is the author version of the paper, for personal usage only:
 > of this project you are using.
 > Please refer to the References section for more details.
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Compilation of web application](#compilation-of-web-application)
+* [User study data analysis](#user-study-data-analysis)
+* [License](#license)
+* [References](#references)
+
 ## Installation
 
 First, you can retrieve this application with git (beware of submodules):
@@ -75,7 +83,7 @@ the required dependencies are:
 
 [install-nvm]: https://github.com/creationix/nvm#install-script
 
-### Installation
+### Installing otis
 
 First move into the `otis/` directory and ...
 
